@@ -1,6 +1,8 @@
 <div align="center">
 
 ## Tomato Leaf Disease Detection System Using CNN
+ 
+ Paper: "https://drive.google.com/file/d/1V1BLn9Mk9_FmXBTggctKkkfAyinO1bBs/view?usp=sharing"
 
 <!-- ### <a href="https://plant49-ai.herokuapp.com/" target="_blank">https://plant49-ai.herokuapp.com/</a> -->
 
