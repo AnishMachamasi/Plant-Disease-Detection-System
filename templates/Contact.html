@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plant Doctor</title>
+    <!--meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!--//booststrap end-->
+
+    <!-- font-awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <!-- //font-awesome icons -->
+
+    <!--stylesheets-->
+    <link
+      href="../static/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <!--//stylesheets-->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <!--headder-->
+    <div class="header-outs inner_page-banner" id="home">
+      <div class="headder-top">
+        <!-- nav -->
+        <nav>
+          <div id="logo">
+            <h1><a href="/">Plant-Doctor</a></h1>
+          </div>
+
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop" />
+
+          <ul class="menu mt-2">
+            <li class="active"><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#test">Detect</a></li>
+            <li>
+              <a href="{{ url_for('team') }}">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- //nav -->
+      </div>
+    </div>
+    <!--//headder-->
+    <!-- short -->
+    <!-- <div class="using-border py-3">
+      <div class="inner_breadcrumb ml-4">
+        <ul class="short_ls">
+          <li>
+            <a href="/">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- //about -->
+
+    <section class="contact">
+      <div class="container py-5">
+        <!-- <div class="row mb-4"> -->
+        <!-- <div class="col-lg-5"> -->
+        <h2 class="displayf font-weight-light">OUR TEAM</h2>
+        <!-- <p class="font-italic text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <div class="row text-center">
+          <!-- Team item-->
+          <div class="col-xl-4 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4">
+              <img
+                src="{{url_for('static', filename='amitduwal.jpg')}}"
+                alt=""
+                width="100"
+                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+              />
+              <h5 class="mb-0">Amit Duwal</h5>
+              <span class="small text-uppercase text-muted">Team Member</span>
+              <br />
+              <span class="small text-uppercase text-muted">KCE075BCT006</span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.facebook.com/amit.duwal.1"
+                    class="social-link"
+                    ><i class="fa fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="social-link"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="social-link"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.linkedin.com/in/amit-duwal-696310200/?fbclid=IwAR1P3XGM3yYGm61TvBqbDXWUoh5i1Zr1SV2pUCh8jVixg43Rt28vqGN9z74"
+                    class="social-link"
+                    ><i class="fa fa-linkedin"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End-->
+
+          <!-- Team item-->
+          <div class="col-xl-4 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4">
+              <img
+                src="{{url_for('static', filename='anishmacha.jpg')}}"
+                alt=""
+                width="100"
+                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+              />
+              <h5 class="mb-0">Anish Machamasi</h5>
+              <span class="small text-uppercase text-muted">Team Member</span>
+              <br />
+              <span class="small text-uppercase text-muted">KCE075BCT007</span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100057503537142"
+                    class="social-link"
+                    ><i class="fa fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://twitter.com/AnishMacha" class="social-link"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.instagram.com/anishmachamas/"
+                    class="social-link"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.linkedin.com/in/anish-machamasi-224220219/"
+                    class="social-link"
+                    ><i class="fa fa-linkedin"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End-->
+
+          <!-- Team item-->
+          <div class="col-xl-4 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4">
+              <img
+                src="{{url_for('static', filename='bimal.jpg')}}"
+                alt=""
+                width="100"
+                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+              />
+              <h5 class="mb-0">Bimal Bhoyadyo</h5>
+              <span class="small text-uppercase text-muted">Team Member</span>
+              <br />
+              <span class="small text-uppercase text-muted">KCE075BCT014</span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100057503537142"
+                    class="social-link"
+                    ><i class="fa fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://twitter.com/AnishMacha" class="social-link"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.instagram.com/anishmachamas/"
+                    class="social-link"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.linkedin.com/in/anish-machamasi-224220219/"
+                    class="social-link"
+                    ><i class="fa fa-linkedin"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End-->
+
+          <!-- End-->
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="container pt-5 pb-3">
+        <div class="footer-w3layouts-head text-center">
+          <h2><a href="/">Plant-Doctor</a></h2>
+        </div>
+        <div class="bottem-wthree-footer text-center pt-md-4 pt-3">
+          <!-- <p>All Rights Reserved | Design by Soumyajit</p> -->
+        </div>
+        <!-- move icon -->
+        <div class="text-center">
+          <a href="#home" class="move-top text-center mt-3"
+            ><i class="fa fa-arrow-up" aria-hidden="true"></i
+          ></a>
+        </div>
+        <!--//move icon -->
+      </div>
+    </footer>
+    <!--//footer -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plant Doctor</title>
+    <!--meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!--//booststrap end-->
+
+    <!-- font-awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css', ) }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="D:\Plant-Leaf-Disease-Prediction-system\static\css\style.css"
+    />
+    <!--//stylesheets-->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/glider.min.css', ) }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="D:\Plant-Leaf-Disease-Prediction-system\static\css\glider.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="main-top" id="home">
+      <!-- header -->
+      <div class="headder-top">
+        <!-- nav -->
+        <nav>
+          <div id="logo">
+            <h1><a href="/">Plant-Doctor</a></h1>
+          </div>
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop" />
+          <ul class="menu mt-2">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#test">Detect</a></li>
+            <li>
+              <a href="{{ url_for('team') }}">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- //nav -->
+      </div>
+      <!-- //header -->
+      <section class="newlink-newnew">
+        <div class="link-center">
+          <!-- <button
+            type="button"
+            class="btn btn-outline-primary"
+            onclick="window.location.href='{{ url_for( 'team' , table='Y' ) }}';"
+          > -->
+
+          <button class="btn btn-outline-primary" onclick="history.back()">
+            Translate to <span style="color: red">English</span>
+          </button>
+          <!-- Translate to <span style="color: red;">नेपाली!</span>
+          </button> -->
+        </div>
+      </section>
+      <!-- banner -->
+      <div class="main-banner text-center">
+        <div class="container">
+          <div class="style-banner">
+            <h4 class="mb-2">स्वागत छ Plant-Doctor मा</h4>
+            <h5>कारणहरू जान्नुहोस् र सजिलै उपचार पाउनुहोस्</h5>
+          </div>
+          <div class="two-demo-button mt-md-4 mt-3">
+            <!-- <p> Developing models for making disease detection easy and providing solutions for improving crop production
+          </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //banner -->
+
+    <!-- about -->
+    <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <div class="row">
+          <div class="col-lg-6 about-imgs-txt pt-3">
+            <img
+              src="../static/images/5.jpg"
+              alt="news image"
+              class="img-fluid"
+              style="border-radius: 8px"
+            />
+          </div>
+          <div class="col-lg-6 text-justify about-two-grids pt-3">
+            <h3 class="title text-center">बारे</h3>
+            <div class="about-para-txt">
+              <p>
+                बालीमा लाग्ने रोगको समयमै पत्ता लगाउनु आवश्यक छ विश्वभरका अरबौं
+                मानिसहरूको खाद्य सुरक्षा। यसले सेवा गर्छ बाली उत्पादन बढाउने र
+                कीटनाशक घटाउने दोहोरो उद्देश्य के कारणले गर्दा हुने रोग बारे
+                थाहा नदिई प्रयोग गर्नुहोस् बिरुवा। वर्तमान समयमा, बिरुवा रोग
+                पत्ता लगाउन महत्त्वपूर्ण छ खाद्य सुरक्षा हासिल गर्ने लक्ष्य। को
+                परम्परागत विधि रोग पत्ता लगाउने म्यानुअल परीक्षणको प्रयोग गरीएको
+                छ किसान वा विज्ञहरू, जुन समय खपत र महँगो हुन सक्छ, लाखौं साना र
+                मध्यम आकारका फार्महरूको लागि असम्भव साबित विश्व भरि। तसर्थ,
+                स्वचालित प्रणालीको प्रयोगले मद्दत गर्न सक्छ मानिसहरूले बिरुवाको
+                रोग धेरै छिटो, उच्च साथ पत्ता लगाउँछन् शुद्धता र त्यो नि: शुल्क।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //about -->
+
+    <!-- service -->
+    <section class="service pb-5" id="features">
+      <div class="container">
+        <h3 class="title text-center mb-3">विशेषताहरु</h3>
+        <div class="row">
+          <div
+            class="col-lg-4 col-md-6 col-sm-6 mt-lg-4 mt-3 service-grid-wthree text-center"
+          >
+            <div class="ser-Agriculture-grid">
+              <div class="about-icon mb-md-4 mb-3">
+                <span class="fa fa-viadeo" aria-hidden="true"></span>
+              </div>
+              <div class="ser-sevice-grid">
+                <h4 class="pb-3">सजिलो पत्ता लगाउने</h4>
+                <p>केवल पात छवि क्लिक गर्न र अपलोड गर्न आवश्यक छ।</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 col-sm-6 mt-lg-4 mt-3 service-grid-wthree text-center"
+          >
+            <div class="ser-Agriculture-grid">
+              <div class="about-icon mb-md-4 mb-3">
+                <span class="fa fa-pagelines" aria-hidden="true"></span>
+              </div>
+              <div class="ser-sevice-grid">
+                <h4 class="pb-3">कारण र समाधान</h4>
+                <p>पहिचान गरिएका रोगहरूको कारण र समाधान प्रदान गर्दछ।</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 col-sm-6 mt-lg-4 mt-3 service-grid-wthree text-center"
+          >
+            <div class="ser-Agriculture-grid">
+              <div class="about-icon mb-md-4 mb-3">
+                <span class="fa fa-leaf" aria-hidden="true"></span>
+              </div>
+              <div class="ser-sevice-grid">
+                <h4 class="pb-3">धेरै बिरुवा रोग समर्थन</h4>
+                <p>टमाटर को लगभग 10 विभिन्न प्रकार को रोग को समर्थन गर्दछ.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog_w3ls py-3 pb-5 pt-10" id="test">
+      <div class="container pb-xl-5 pb-lg-3">
+        <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
+          तपाईंको बिरुवाहरू परीक्षण गर्नुहोस्
+        </h3>
+        <div class="row" style="justify-content: center">
+          <form
+            action="/predict"
+            method="post"
+            enctype="multipart/form-data"
+            onsubmit="showloading()"
+          >
+            <div class="form-group text-center">
+              <label for="exampleFormControlFile1"
+                ><b>टमाटरको पातको छवि अपलोड गर्नुहोस्</b></label
+              >
+              <input
+                type="file"
+                name="image"
+                class="form-control-file"
+                id="inputImage"
+                onchange="previewImage(event)"
+                required
+              />
+              <br />
+              <button class="btn btn-primary" type="submit">
+                भविष्यवाणी गर्नुहोस्
+              </button>
+              <!-- <input type="submit" value="Predict" /> -->
+            </div>
+          </form>
+        </div>
+        <img id="output-image" class="rounded mx-auto d-block" />
+        <br />
+      </div>
+    </section>
+
+    <!-- slider -->
+
+    <section class="p-slider">
+      <br /><br />
+      <h3 class="product-slider-heading">
+        टमाटर रोग बारे थप जान्न चाहनुहुन्छ?
+      </h3>
+
+      <div class="slider-btns">
+        <button aria-label="Previous" class="glider-prev">
+          <span></span>
+        </button>
+        <button aria-label="Next" class="glider-next">
+          <span></span>
+        </button>
+      </div>
+
+      <div class="glider-contain">
+        <div class="glider">
+          <div class="product-box">
+            <!-- <span class="p-discount"></span> -->
+
+            <div class="p-img-container">
+              <div class="p-img">
+                <a href="#">
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Late_blight.JPG')}}"
+                    class="p-img-front"
+                    alt="Front"
+                  />
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Late_blight.JPG')}}"
+                    class="p-img-back"
+                    alt="Back"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="p-box-text">
+              <div class="product-category">
+                <span>टमाटर</span>
+              </div>
+              <a href="#" class="product-title">लेट ब्लाइट</a>
+              <div class="price-buy">
+                <span class="p-price"></span>
+                <a
+                  href="https://content.ces.ncsu.edu/tomato-late-blight"
+                  class="p-buy-btn"
+                  >अझ धेरै हेर्नुहोस्</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <!-- <span class="p-discount"></span> -->
+
+            <div class="p-img-container">
+              <div class="p-img">
+                <a href="#">
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Leaf_Mold.JPG')}}"
+                    class="p-img-front"
+                    alt="Front"
+                  />
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Leaf_Mold.JPG')}}"
+                    class="p-img-back"
+                    alt="Back"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="p-box-text">
+              <div class="product-category">
+                <span>टमाटर</span>
+              </div>
+              <a href="#" class="product-title">पात मोल्ड</a>
+              <div class="price-buy">
+                <span class="p-price"></span>
+                <a
+                  href="https://www.canr.msu.edu/news/tomato-leaf-mold-in-hoophouse-tomatoes#:~:text=What%20is%20tomato%20leaf%20mold,primarily%20in%20hoophouses%20and%20greenhouses."
+                  class="p-buy-btn"
+                  >अझ धेरै हेर्नुहोस्</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <!-- <span class="p-discount"></span> -->
+
+            <div class="p-img-container">
+              <div class="p-img">
+                <a href="#">
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Septoria_leaf_spot.JPG')}}"
+                    class="p-img-front"
+                    alt="Front"
+                  />
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Septoria_leaf_spot.JPG')}}"
+                    class="p-img-back"
+                    alt="Back"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="p-box-text">
+              <div class="product-category">
+                <span>टमाटर</span>
+              </div>
+              <a href="#" class="product-title">सेप्टोरिया पात स्पट</a>
+              <div class="price-buy">
+                <span class="p-price"></span>
+                <a
+                  href="https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/pests-and-problems/diseases/fungal-spots/septoria-leaf-spot-of-tomato.aspx#:~:text=Septoria%20leaf%20spot%20is%20caused,weather%20persists%20for%20extended%20periods.&text=Septoria%20leaf%20spot%20usually%20appears,after%20the%20first%20fruit%20sets."
+                  class="p-buy-btn"
+                  >अझ धेरै हेर्नुहोस्</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <!-- <span class="p-discount"></span> -->
+
+            <div class="p-img-container">
+              <div class="p-img">
+                <a href="#">
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Target_Spot.JPG')}}"
+                    class="p-img-front"
+                    alt="Front"
+                  />
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Target_Spot.JPG')}}"
+                    class="p-img-back"
+                    alt="Back"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="p-box-text">
+              <div class="product-category">
+                <span>टमाटर</span>
+              </div>
+              <a href="#" class="product-title">टार्गेट स्पोट</a>
+              <div class="price-buy">
+                <span class="p-price"></span>
+                <a
+                  href="https://www.gardeningknowhow.com/edible/vegetables/tomato/target-spot-on-tomatoes.htm#:~:text=Also%20known%20as%20early%20blight,passion%20flower%20and%20certain%20ornamentals."
+                  class="p-buy-btn"
+                  >अझ धेरै हेर्नुहोस्</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <!-- <span class="p-discount"></span> -->
+
+            <div class="p-img-container">
+              <div class="p-img">
+                <a href="#">
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Tomato_mosaic_virus.JPG')}}"
+                    class="p-img-front"
+                    alt="Front"
+                  />
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Tomato_mosaic_virus.JPG')}}"
+                    class="p-img-back"
+                    alt="Back"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="p-box-text">
+              <div class="product-category">
+                <span>टमाटर</span>
+              </div>
+              <a href="#" class="product-title">मोजाइक भाइरस</a>
+              <div class="price-buy">
+                <span class="p-price"></span>
+                <a
+                  href="https://www.creative-diagnostics.com/blog/index.php/what-is-tomato-mosaic-virus/#:~:text=Tomato%20mosaic%20virus%20strains%20occur,a%20diffuse%20chlorotic%20leaf%20spotting.&text=Treating%20mosaic%20virus%20is%20difficult,there%20are%20for%20fungal%20diseases."
+                  class="p-buy-btn"
+                  >अझ धेरै हेर्नुहोस्</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <!-- <span class="p-discount"></span> -->
+
+            <div class="p-img-container">
+              <div class="p-img">
+                <a href="#">
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Tomato_Yellow_Leaf_Curl_Virus.JPG')}}"
+                    class="p-img-front"
+                    alt="Front"
+                  />
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Tomato_Yellow_Leaf_Curl_Virus.JPG')}}"
+                    class="p-img-back"
+                    alt="Back"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="p-box-text">
+              <div class="product-category">
+                <span>टमाटर</span>
+              </div>
+              <a href="#" class="product-title">पहेंलो पात कर्ल भाइरस</a>
+              <div class="price-buy">
+                <span class="p-price"></span>
+                <a
+                  href="https://www2.ipm.ucanr.edu/agriculture/tomato/tomato-yellow-leaf-curl/"
+                  class="p-buy-btn"
+                  >अझ धेरै हेर्नुहोस्</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <!-- <span class="p-discount"></span> -->
+
+            <div class="p-img-container">
+              <div class="p-img">
+                <a href="#">
+                  <img
+                    src="{{url_for('static', filename='images/spidermite.JPG')}}"
+                    class="p-img-front"
+                    alt="Front"
+                  />
+                  <img
+                    src="{{url_for('static', filename='images/spidermite.JPG')}}"
+                    class="p-img-back"
+                    alt="Back"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="p-box-text">
+              <div class="product-category">
+                <span>टमाटर</span>
+              </div>
+              <a href="#" class="product-title">दुई स्पोटेड स्पाइडर माइट</a>
+              <div class="price-buy">
+                <span class="p-price"></span>
+                <a
+                  href="https://ag.umass.edu/vegetable/fact-sheets/two-spotted-spider-mite#:~:text=The%20two%2Dspotted%20spider%20mite,most%20important%20pests%20of%20eggplant."
+                  class="p-buy-btn"
+                  >अझ धेरै हेर्नुहोस्</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <!-- <span class="p-discount"></span> -->
+
+            <div class="p-img-container">
+              <div class="p-img">
+                <a href="#">
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Bacterial_spot.JPG')}}"
+                    class="p-img-front"
+                    alt="Front"
+                  />
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Bacterial_spot.JPG')}}"
+                    class="p-img-back"
+                    alt="Back"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="p-box-text">
+              <div class="product-category">
+                <span>टमाटर</span>
+              </div>
+              <a href="#" class="product-title">ब्याक्टेरिया स्पट</a>
+              <div class="price-buy">
+                <span class="p-price"></span>
+                <a
+                  href="https://hort.extension.wisc.edu/articles/bacterial-spot-of-tomato/#:~:text=Bacterial%20spot%20of%20tomato%20is%20caused%20by%20Xanthomonas%20vesicatoria%2C%20Xanthomonas,or%20may%20not%20show%20symptoms."
+                  class="p-buy-btn"
+                  >अझ धेरै हेर्नुहोस्</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <!-- <span class="p-discount"></span> -->
+
+            <div class="p-img-container">
+              <div class="p-img">
+                <a href="#">
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Early_blight.JPG')}}"
+                    class="p-img-front"
+                    alt="Front"
+                  />
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___Early_blight.JPG')}}"
+                    class="p-img-back"
+                    alt="Back"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="p-box-text">
+              <div class="product-category">
+                <span>टमाटर</span>
+              </div>
+              <a href="#" class="product-title">प्रारम्भिक ब्लाइट</a>
+              <div class="price-buy">
+                <span class="p-price"></span>
+                <a
+                  href="https://extension.umn.edu/disease-management/early-blight-tomato"
+                  class="p-buy-btn"
+                  >अझ धेरै हेर्नुहोस्</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <!-- <span class="p-discount"></span> -->
+
+            <div class="p-img-container">
+              <div class="p-img">
+                <a href="#">
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___healthy .JPG')}}"
+                    class="p-img-front"
+                    alt="Front"
+                  />
+                  <img
+                    src="{{url_for('static', filename='images/Tomato___healthy .JPG')}}"
+                    class="p-img-back"
+                    alt="Back"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="p-box-text">
+              <div class="product-category">
+                <span>टमाटर</span>
+              </div>
+              <a href="#" class="product-title">स्वस्थ</a>
+              <div class="price-buy">
+                <span class="p-price"></span>
+                <a
+                  href="https://savvygardening.com/tomato-garden/"
+                  class="p-buy-btn"
+                  >अझ धेरै हेर्नुहोस्</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newlink">
+      <div class="link-center">
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          onclick="window.location.href='https://www.google.com/maps/search/Plant+Center/@27.7000808,85.2983128,12z/data=!3m1!4b1';"
+        >
+          नेपालको बिभिन्न बिरुवा केन्द्रको भ्रमण गर्नुहोस्
+        </button>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="container pt-5 pb-3">
+        <div class="footer-w3layouts-head text-center">
+          <h2><a href="/">Plant-Doctor</a></h2>
+        </div>
+
+        <!-- move icon -->
+        <div class="text-center">
+          <a href="#home" class="move-top text-center mt-3"
+            ><i class="fa fa-arrow-up" aria-hidden="true"></i
+          ></a>
+        </div>
+        <div class="bottem-wthree-footer text-center pt-md-4 pt-3">
+          <!-- <p>All Rights Reserved | Design by Soumyajit</p> -->
+          <ul class="socials">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100057503537142"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a href="https://twitter.com/AnishMacha"
+                ><i class="fa fa-twitter"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/anish-machamasi-224220219/"
+                ><i class="fa fa-linkedin-square"></i
+              ></a>
+              <a href="https://www.instagram.com/anishmachamas/"
+                ><i class="fa fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <!--//move icon -->
+      </div>
+    </footer>
+    <!--//footer -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+          var output = document.getElementById("output-image");
+          output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+      }
+    </script>
+    <script src="{{url_for('static', filename='js/glider.min.js')}}"></script>
+
+    <script>
+      new Glider(document.querySelector(".glider"), {
+        slidesToScroll: 1,
+        slidesToShow: 4,
+        draggable: true,
+        dots: ".dots",
+        arrows: {
+          prev: ".glider-prev",
+          next: ".glider-next",
+        },
+        responsive: [
+          {
+            // screens greater than >= 775px
+            breakpoint: 1200,
+            settings: {
+              // Set to `auto` and provide item width to adjust to viewport
+              slidesToShow: 4,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            // screens greater than >= 1024px
+            breakpoint: 900,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            // screens greater than >= 1024px
+            breakpoint: 640,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            // screens greater than >= 1024px
+            breakpoint: 304,
+            settings: {
+              slidesToShow: 1.5,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            // screens greater than >= 1024px
+            breakpoint: 0,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

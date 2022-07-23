@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plant Doctor</title>
+    <!--meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!--//booststrap end-->
+
+    <!-- font-awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+    />
+    <!-- //font-awesome icons -->
+
+    <!--stylesheets-->
+    <link
+      href="../static/styles/style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <!--//stylesheets-->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <!--headder-->
+    <div class="header-outs inner_page-banner" id="home">
+      <div class="headder-top">
+        <!-- nav -->
+        <nav>
+          <div id="logo">
+            <h1><a href="/">Plant-Doctor</a></h1>
+          </div>
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop" />
+
+          <ul class="menu mt-2">
+            <li class="active"><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#test">Detect</a></li>
+            <li>
+              <a href="{{ url_for('team') }}">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- //nav -->
+      </div>
+    </div>
+    <!--//headder-->
+    <!-- short -->
+    <!-- <div class="using-border py-3">
+      <div class="inner_breadcrumb ml-4">
+        <ul class="short_ls">
+          <li>
+            <a href="/">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+    <!-- //short-->
+
+    <section class="newlink-new">
+      <div class="link-center">
+        <!-- <button
+          type="button"
+          class="btn btn-outline-primary"
+          onclick="window.location.href='{{ url_for( 'team' , table='Y' ) }}';"
+        > -->
+
+        <button class="btn btn-outline-primary" onclick="history.back()">
+          Translate to <span style="color: red">English</span>
+        </button>
+        <!-- Translate to <span style="color: red;">नेपाली!</span>
+        </button> -->
+      </div>
+    </section>
+    <!-- about -->
+    <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <div class="row" style="justify-content: center">
+          <div class="col-md-10 about-two-grids">
+            <h3 class="mb-md-4 mb-sm-3 mb-3 text-center">Result</h3>
+            <img
+              src="{{url_for('static', filename='images/Tomato___Tomato_Yellow_Leaf_Curl_Virus.JPG')}}"
+              align="middle"
+            />
+            <div class="about-para-txt text-justify">
+              <b>फसल</b>: टमाटर <br /><b>रोग</b>: पहेंलो पात कर्ल भाइरस<br />
+              <br />
+              <u><b>रोगको कारण:</b></u> <br /><br />
+              1. TYLCV किरा भेक्टर बेमिसिया तबासी द्वारा प्रसारित हुन्छ
+              लगातार-सर्क्युलेटिव गैर-प्रसारात्मक तरिका। भाइरस हुन सक्छ वयस्क
+              चरणहरूमा कुशलतापूर्वक प्रसारित। <br /><br />
+              2. यो भाइरस प्रसारणको छोटो अधिग्रहण पहुँच अवधि छ 15-20 मिनेटको, र
+              8-24 घण्टाको सुप्त अवधि। <br /><br />
+              <u><b>रोगबाट कसरी बच्ने/उपचार गर्ने:</b></u> <br />
+              <br />१. हाल, सबैभन्दा प्रभावकारी उपचार नियन्त्रण गर्न प्रयोग
+              गरिन्छ TYLCV को फैलावट किटनाशक र प्रतिरोधी बाली प्रजातिहरू
+              हुन्।<br />
+              <br />२. कीटनाशकको ​​प्रभावकारिता इष्टतम छैन उष्णकटिबंधीय
+              क्षेत्रहरूमा सेतो फ्लाई प्रतिरोधको कारण कीटनाशकहरू; तसर्थ,
+              कीटनाशकहरू वैकल्पिक वा भाइरस विरुद्ध सबैभन्दा प्रभावकारी उपचार
+              प्रदान गर्न मिश्रित ट्रान्समिसन।<br />
+              <br />३. TYLCV को फैलावट नियन्त्रण गर्ने अन्य विधिहरू समावेश छन्
+              प्रतिरोधी/सहिष्णु रेखाहरू रोप्ने, फसल घुमाउने, र प्रजननका लागि
+              TYLCV को प्रतिरोध। धेरै अन्य बिरुवा भाइरस संग जस्तै, एक TYLCV
+              नियन्त्रण गर्ने सबैभन्दा आशाजनक विधिहरू उत्पादन हो TYLCV प्रतिरोधी
+              ट्रान्सजेनिक टमाटर बिरुवा।
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //about -->
+
+    <!-- footer -->
+    <footer>
+      <div class="container pt-5 pb-3">
+        <div class="footer-w3layouts-head text-center">
+          <h2><a href="/">Plant-Doctor</a></h2>
+        </div>
+        <div class="bottem-wthree-footer text-center pt-md-4 pt-3">
+          <!-- <p>All Rights Reserved | Design by Soumyajit</p> -->
+        </div>
+        <!-- move icon -->
+        <div class="text-center">
+          <a href="#home" class="move-top text-center mt-3"
+            ><i class="fa fa-arrow-up" aria-hidden="true"></i
+          ></a>
+        </div>
+        <!--//move icon -->
+      </div>
+    </footer>
+    <!--//footer -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

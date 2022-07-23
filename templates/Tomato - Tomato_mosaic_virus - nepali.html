@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plant Doctor</title>
+    <!--meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!--//booststrap end-->
+
+    <!-- font-awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+    />
+    <!-- //font-awesome icons -->
+
+    <!--stylesheets-->
+    <link
+      href="../static/styles/style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <!--//stylesheets-->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <!--headder-->
+    <div class="header-outs inner_page-banner" id="home">
+      <div class="headder-top">
+        <!-- nav -->
+        <nav>
+          <div id="logo">
+            <h1><a href="/">Plant-Doctor</a></h1>
+          </div>
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop" />
+
+          <ul class="menu mt-2">
+            <li class="active"><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#test">Detect</a></li>
+            <li>
+              <a href="{{ url_for('team') }}">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- //nav -->
+      </div>
+    </div>
+    <!--//headder-->
+    <!-- short -->
+    <!-- <div class="using-border py-3">
+      <div class="inner_breadcrumb ml-4">
+        <ul class="short_ls">
+          <li>
+            <a href="/">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+    <!-- //short-->
+    <section class="newlink-new">
+      <div class="link-center">
+        <!-- <button
+          type="button"
+          class="btn btn-outline-primary"
+          onclick="window.location.href='{{ url_for( 'team' , table='Y' ) }}';"
+        > -->
+
+        <button class="btn btn-outline-primary" onclick="history.back()">
+          Translate to <span style="color: red">English</span>
+        </button>
+        <!-- Translate to <span style="color: red;">नेपाली!</span>
+        </button> -->
+      </div>
+    </section>
+    <!-- about -->
+    <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <div class="row" style="justify-content: center">
+          <div class="col-md-10 about-two-grids">
+            <h3 class="mb-md-4 mb-sm-3 mb-3 text-center">Result</h3>
+            <img
+              src="{{url_for('static', filename='images/Tomato___Tomato_mosaic_virus.JPG')}}"
+              align="middle"
+            />
+            <div class="about-para-txt text-justify">
+              <b>बाली</b>: टमाटर <br /><b>रोग</b>: मोजाइक भाइरस<br />
+              <br />
+              <u><b>रोगको कारण:</b></u> <br /><br />
+              1. टमाटो मोजाइक भाइरस र तंबाकू मोजाइक भाइरस दुई को लागी हुन सक्छ
+              सुक्खा माटो वा पातको मलबेमा वर्षौं, तर एक महिना मात्र रहन्छ यदि
+              माटो ओसिलो छ। भाइरस संक्रमित जरामा पनि बाँच्न सक्छ दुई वर्ष सम्म
+              माटो मा मलबे। <br /><br />
+              2. बीउ संक्रमित हुन सक्छ र बिरुवामा भाइरस पास गर्न सक्छ तर रोग
+              सामान्यतया परिचय र मुख्य रूपमा मानिस मार्फत फैलिन्छ गतिविधि।
+              कामदारको बोटबिरुवामा भाइरस सजिलै सर्न सक्छ हात, औजार, र कपडाहरु
+              जस्तै सामान्य गतिविधिहरु संग बोट बाँध्नु, चुस्नु, र फसल काट्नु
+              <br /><br />
+              3. भाइरसले तंबाकू निको पार्ने प्रक्रियामा पनि बाँच्न सक्छ, र सक्छ
+              चुरोट र अन्य सुर्तीजन्य पदार्थबाट बिरुवामा फैलिन्छ चुरोट पछि
+              कामदारहरूले ह्यान्डल गरेको सामग्री <br /><br />
+              <u><b>रोगबाट कसरी बच्ने/उपचार गर्ने:</b></u> <br />
+              <br />१. प्रतिष्ठित स्रोतहरूबाट मात्र प्रत्यारोपण खरिद गर्नुहोस्।
+              सोध्नु तिनीहरूले रोग रोक्न प्रयोग गर्ने सरसफाइ प्रक्रियाहरू
+              बारे।<br />
+              <br />२. खरिद गर्नु अघि प्रत्यारोपण निरीक्षण गर्नुहोस्। मात्र
+              छान्नुहोस् प्रत्यारोपणमा कुनै स्पष्ट लक्षण देखिँदैन।<br />
+
+              <br />३. टमाटरको जराको फोहोर भएको खेतमा रोपण नगर्नुहोस् वर्तमान,
+              किनकि भाइरस जराहरूमा लामो समयसम्म बाँच्न सक्छ। <br /><br />४।
+              ह्यान्डल गर्नु अघि र चलाउँदा साबुन र पानीले हात धुनुहोस् बिरुवाहरू
+              बीच सम्भावित फैलावट कम गर्न बिरुवाहरू।
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //about -->
+
+    <!-- footer -->
+    <footer>
+      <div class="container pt-5 pb-3">
+        <div class="footer-w3layouts-head text-center">
+          <h2><a href="/">Plant-Doctor</a></h2>
+        </div>
+        <div class="bottem-wthree-footer text-center pt-md-4 pt-3">
+          <!-- <p>All Rights Reserved | Design by Soumyajit</p> -->
+        </div>
+        <!-- move icon -->
+        <div class="text-center">
+          <a href="#home" class="move-top text-center mt-3"
+            ><i class="fa fa-arrow-up" aria-hidden="true"></i
+          ></a>
+        </div>
+        <!--//move icon -->
+      </div>
+    </footer>
+    <!--//footer -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
