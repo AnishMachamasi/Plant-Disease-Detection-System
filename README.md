@@ -75,5 +75,8 @@ After that, use following command to run:
 <br>
 
 For further info, you can use `stackoverflow` as well.
-
+Note: Replace following in leaf.py if internal server error occurs:
+ if __name__ == "__main__":
+    app.run(debug=True)
+    app.run(threaded=False, port=8080) 
 </div>
