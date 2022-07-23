@@ -3,6 +3,7 @@
 ## Tomato Leaf Disease Detection System Using CNN
  
  Paper: "https://drive.google.com/file/d/1V1BLn9Mk9_FmXBTggctKkkfAyinO1bBs/view?usp=sharing"
+ pptx : "https://docs.google.com/presentation/d/1QXeXSAYMIoBL_p7uB9oz4vsLHysP1r51/edit?usp=sharing&ouid=113979974867999383936&rtpof=true&sd=true"
 
 <!-- ### <a href="https://plant49-ai.herokuapp.com/" target="_blank">https://plant49-ai.herokuapp.com/</a> -->
 
@@ -29,9 +30,12 @@ Major procedure for creating model and use it for detection of plant disease are
 2. Model building
 
    - I have used CNN (transfer learning) for building the model.
-   - I used two models:-
+   - I have three models by:-
      1. Transfer learning model
      2. Using Transfer learning VGG16 Architecture.
+     3. Resnet architecture
+ Model link: "https://drive.google.com/drive/folders/1AC-ti4An3sed2WDGEU7qZUD8SPNV8jEe?usp=sharing"
+ Save those model inside main
 
 3. Training
 
@@ -55,6 +59,8 @@ Major procedure for creating model and use it for detection of plant disease are
 To run the `leaf.py`, initially install all the packages of `requirements.txt`. It is suggested to use `virtual environment` while installing all packages from requirements.txt. To install, use following command:
 <br>
 `pip install requirements.txt`
+ 
+Note: Library may get updated with time. So make changes accordingly.
 
 <br>
 
