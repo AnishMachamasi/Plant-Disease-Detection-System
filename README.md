@@ -33,7 +33,7 @@ Major procedure for creating model and use it for detection of plant disease are
    - I have three models by:-
      1. Transfer learning model
      2. Using Transfer learning VGG16 Architecture.
-     3. Resnet architecture
+     3. Resnet architecture \
  Model link: "https://drive.google.com/drive/folders/1AC-ti4An3sed2WDGEU7qZUD8SPNV8jEe?usp=sharing"
  Save those model inside main
 
